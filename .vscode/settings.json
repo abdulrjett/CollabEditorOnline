@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./nlp_server/fix_",
+        "./nlp_server/fix_"
+    ]
+}

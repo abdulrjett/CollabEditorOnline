@@ -1,0 +1,121 @@
+/* Editor Styles */
+.line-numbers {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.line-numbers::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.line-number {
+  font-family: monospace;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+/* Textarea styling */
+.MuiTextField-root textarea {
+  font-family: monospace !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+}
+
+/* Custom scrollbar for editor */
+.MuiTextField-root textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.MuiTextField-root textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.MuiTextField-root textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.MuiTextField-root textarea::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Lock/unlock icon transitions */
+.MuiIconButton-root {
+  transition: all 0.2s;
+}
+
+.MuiIconButton-root:hover {
+  transform: scale(1.1);
+}
+
+/* Editor focus styles */
+.MuiTextField-root.Mui-focused {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Smooth typing experience */
+.MuiTextField-root textarea {
+  caret-color: #1976d2;
+  transition: background-color 0.1s;
+}
+
+/* Line highlighting */
+.line-highlight {
+  background-color: rgba(33, 150, 243, 0.1) !important;
+}
+
+/* Colored line backgrounds */
+.line-owner {
+  background-color: rgba(76, 175, 80, 0.1) !important; /* Green for owner edits */
+}
+
+.line-current-user {
+  background-color: rgba(33, 150, 243, 0.1) !important; /* Blue for current user edits */
+}
+
+.line-collaborator {
+  background-color: rgba(255, 152, 0, 0.1) !important; /* Orange for collaborator edits */
+}
+
+.line-locked {
+  background-color: rgba(244, 67, 54, 0.05) !important; /* Red for locked lines */
+}
+
+.line-with-comment {
+  border-right: 3px solid #FFC107 !important; /* Yellow indicator for lines with comments */
+}
+
+/* Animation for auto-locking */
+@keyframes lockPulse {
+  0% { background-color: rgba(33, 150, 243, 0); }
+  50% { background-color: rgba(33, 150, 243, 0.1); }
+  100% { background-color: rgba(33, 150, 243, 0); }
+}
+
+.line-auto-locked {
+  animation: lockPulse 2s ease-in-out;
+}
+
+/* Comment icon styles */
+.comment-indicator {
+  color: #FFC107;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.comment-indicator:hover {
+  transform: scale(1.2);
+  color: #FF9800;
+}
+
+/* Active editing line */
+.line-active {
+  background-color: rgba(33, 150, 243, 0.15) !important;
+  border-left: 3px solid #1976d2 !important;
+} 
